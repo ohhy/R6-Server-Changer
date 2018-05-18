@@ -1,0 +1,14 @@
+C:\Users\minwo\Desktop\R6 Server Changer\R6 Server Changer\bin\Release\R6 Server Changer.exe.config
+C:\Users\minwo\Desktop\R6 Server Changer\R6 Server Changer\bin\Release\R6 Server Changer.exe
+C:\Users\minwo\Desktop\R6 Server Changer\R6 Server Changer\bin\Release\R6 Server Changer.pdb
+C:\Users\minwo\Desktop\R6 Server Changer\R6 Server Changer\bin\Release\HtmlAgilityPack.dll
+C:\Users\minwo\Desktop\R6 Server Changer\R6 Server Changer\bin\Release\HtmlAgilityPack.pdb
+C:\Users\minwo\Desktop\R6 Server Changer\R6 Server Changer\bin\Release\HtmlAgilityPack.xml
+C:\Users\minwo\Desktop\R6 Server Changer\R6 Server Changer\obj\Release\R6 Server Changer.csprojAssemblyReference.cache
+C:\Users\minwo\Desktop\R6 Server Changer\R6 Server Changer\obj\Release\R6_Server_Changer.Form1.resources
+C:\Users\minwo\Desktop\R6 Server Changer\R6 Server Changer\obj\Release\R6_Server_Changer.Properties.Resources.resources
+C:\Users\minwo\Desktop\R6 Server Changer\R6 Server Changer\obj\Release\R6 Server Changer.csproj.GenerateResource.cache
+C:\Users\minwo\Desktop\R6 Server Changer\R6 Server Changer\obj\Release\R6 Server Changer.csproj.CoreCompileInputs.cache
+C:\Users\minwo\Desktop\R6 Server Changer\R6 Server Changer\obj\Release\R6 Server Changer.csproj.CopyComplete
+C:\Users\minwo\Desktop\R6 Server Changer\R6 Server Changer\obj\Release\R6 Server Changer.exe
+C:\Users\minwo\Desktop\R6 Server Changer\R6 Server Changer\obj\Release\R6 Server Changer.pdb
