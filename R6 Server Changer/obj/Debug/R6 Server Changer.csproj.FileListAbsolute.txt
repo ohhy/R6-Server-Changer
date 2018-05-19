@@ -8,3 +8,8 @@ C:\Users\minwo\Desktop\R6 Server Changer\R6 Server Changer\obj\Debug\R6 Server C
 C:\Users\minwo\Desktop\R6 Server Changer\R6 Server Changer\obj\Debug\R6 Server Changer.csproj.CoreCompileInputs.cache
 C:\Users\minwo\Desktop\R6 Server Changer\R6 Server Changer\obj\Debug\R6 Server Changer.exe
 C:\Users\minwo\Desktop\R6 Server Changer\R6 Server Changer\obj\Debug\R6 Server Changer.pdb
+C:\Users\minwo\Desktop\R6 Server Changer\R6 Server Changer\bin\Debug\HtmlAgilityPack.dll
+C:\Users\minwo\Desktop\R6 Server Changer\R6 Server Changer\bin\Debug\HtmlAgilityPack.pdb
+C:\Users\minwo\Desktop\R6 Server Changer\R6 Server Changer\bin\Debug\HtmlAgilityPack.xml
+C:\Users\minwo\Desktop\R6 Server Changer\R6 Server Changer\obj\Debug\R6 Server Changer.csproj.CopyComplete
+C:\Users\minwo\Desktop\R6 Server Changer\R6 Server Changer\obj\Debug\R6_Server_Changer.Form2.resources

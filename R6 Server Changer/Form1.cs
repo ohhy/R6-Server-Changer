@@ -1,6 +1,8 @@
 ﻿using System;
 using System.IO;
 using System.Windows.Forms;
+using HtmlAgilityPack;
+using System.Threading;
 
 namespace R6_Server_Changer
 {
@@ -24,9 +26,7 @@ namespace R6_Server_Changer
             if (OpenFile_Dialog.ShowDialog() == DialogResult.OK)
             {
                 uri = (OpenFile_Dialog.FileName);
-                file_path_label.Text = uri;
 
-                state_label.Text += "파일 설정 완료 ";
                 SelectFile = true;
             }
 
@@ -35,9 +35,11 @@ namespace R6_Server_Changer
         {
             //서버 선택함
             selected_server.Text = servers[comboBox1.SelectedIndex];
-            state_label.Text += "서버 선택 완료";
             SelectServer = true;
         }
+
+
+
         private void select_server_Click(object sender, EventArgs e)
         {
             if (!SelectFile)
@@ -68,9 +70,9 @@ namespace R6_Server_Changer
                 {
                     count++;
                 }
-                
+
                 //파일에서 count-1 크기만큼 지움(count는 \n까지 포함이라서)
-                file_text = file_text.Remove(startIndex, count-1);
+                file_text = file_text.Remove(startIndex, count - 1);
                 //서버 이름 삽입
                 file_text = file_text.Insert(startIndex, servers[comboBox1.SelectedIndex]);
                 //변경사항 쓰기위해 스트림라이터 오픈
@@ -86,6 +88,49 @@ namespace R6_Server_Changer
                 MessageBox.Show("에러가 났습니다.");
             }
         }
+        private void search_player_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string uri = "https://r6stats.com/stats/uplay/" + player_name.Text;
+                var web = new HtmlWeb();
+                var doc = web.Load(uri);
 
+                string kill = "", death = "", kd = "", level = "", win;
+
+                kill = doc.DocumentNode.SelectSingleNode(".//div[@class='col-md-3 col-xs-6 stat']")
+                    .SelectSingleNode(".//div[@class='value']").InnerText;
+                death = doc.DocumentNode.SelectNodes(".//div[@class='col-md-3 col-xs-6 stat']")[1]
+                    .SelectSingleNode(".//div[@class='value']").InnerText;
+                kd = doc.DocumentNode.SelectNodes(".//div[@class='col-md-3 col-xs-6 stat']")[2]
+                    .SelectSingleNode(".//div[@class='value']").InnerText;
+                level = doc.DocumentNode.SelectNodes(".//div[@class='col-md-3 col-xs-6 stat']")[7]
+                    .SelectSingleNode(".//div[@class='value']").InnerText;
+                win = doc.DocumentNode.SelectNodes(".//div[@class='col-md-3 col-xs-6 stat']")[5]
+                    .SelectSingleNode(".//div[@class='value']").InnerText;
+
+                kill = kill.Replace("\n", "");
+                death = death.Replace("\n", "");
+                kd = kd.Replace("\n", "");
+                level = level.Replace("\n", "");
+                win = win.Replace("\n", "");
+
+                killed_n.Text = kill;
+                death_n.Text = death;
+                kill_death_n.Text = kd;
+                level_n.Text = level;
+                win_n.Text = win;
+            }
+            catch(NullReferenceException)
+            {
+                MessageBox.Show($"{player_name.Text}는 uplay유저가 아니거나\n없는 플레이어입니다");
+            }
+        }
+
+        private void help_btn_Click(object sender, EventArgs e)
+        {
+            Form2 help_form = new Form2();
+            help_form.ShowDialog();
+        }
     }
 }
