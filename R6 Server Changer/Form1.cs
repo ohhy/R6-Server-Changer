@@ -6,7 +6,7 @@ using System.Threading;
 
 namespace R6_Server_Changer
 {
-    public partial class Form1 : Form
+    public partial class Form1 : MetroFramework.Forms.MetroForm
     {
         string uri;
         string[] servers = { "default", "eus", "cus", "scus", "wus", "sbr", "neu", "weu", "eas", "seas", "eau", "wja" };
@@ -31,15 +31,11 @@ namespace R6_Server_Changer
             }
 
         }
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        private void server_box_SelectedIndexChanged(object sender, EventArgs e)
         {
-            //서버 선택함
-            selected_server.Text = servers[comboBox1.SelectedIndex];
+            selected_server.Text = servers[server_box.SelectedIndex];
             SelectServer = true;
         }
-
-
-
         private void select_server_Click(object sender, EventArgs e)
         {
             if (!SelectFile)
@@ -47,6 +43,7 @@ namespace R6_Server_Changer
                 MessageBox.Show("파일을 선택하여 주십시오");
                 return;
             }
+
             else if (!SelectServer)
             {
                 MessageBox.Show("서버를 선택하여 주십시오");
@@ -74,7 +71,7 @@ namespace R6_Server_Changer
                 //파일에서 count-1 크기만큼 지움(count는 \n까지 포함이라서)
                 file_text = file_text.Remove(startIndex, count - 1);
                 //서버 이름 삽입
-                file_text = file_text.Insert(startIndex, servers[comboBox1.SelectedIndex]);
+                file_text = file_text.Insert(startIndex, servers[server_box.SelectedIndex]);
                 //변경사항 쓰기위해 스트림라이터 오픈
                 StreamWriter sw = new StreamWriter(uri);
                 //변경사항 다시 씀
@@ -121,11 +118,12 @@ namespace R6_Server_Changer
                 level_n.Text = level;
                 win_n.Text = win;
             }
-            catch(NullReferenceException)
+            catch (NullReferenceException)
             {
                 MessageBox.Show($"{player_name.Text}는 uplay유저가 아니거나\n없는 플레이어입니다");
             }
         }
+
 
         private void help_btn_Click(object sender, EventArgs e)
         {

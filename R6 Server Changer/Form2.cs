@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace R6_Server_Changer
 {
-    public partial class Form2 : Form
+    public partial class Form2 : MetroFramework.Forms.MetroForm
     {
         public Form2()
         {
@@ -20,6 +20,16 @@ namespace R6_Server_Changer
         private void clean_btn_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void Form2_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -13,3 +13,5 @@ C:\Users\minwo\Desktop\R6 Server Changer\R6 Server Changer\bin\Debug\HtmlAgility
 C:\Users\minwo\Desktop\R6 Server Changer\R6 Server Changer\bin\Debug\HtmlAgilityPack.xml
 C:\Users\minwo\Desktop\R6 Server Changer\R6 Server Changer\obj\Debug\R6 Server Changer.csproj.CopyComplete
 C:\Users\minwo\Desktop\R6 Server Changer\R6 Server Changer\obj\Debug\R6_Server_Changer.Form2.resources
+C:\Users\minwo\Desktop\R6 Server Changer\R6 Server Changer\bin\Debug\MetroFramework.dll
+C:\Users\minwo\Desktop\R6 Server Changer\R6 Server Changer\bin\Debug\MetroFramework.Fonts.dll
