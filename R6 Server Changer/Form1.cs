@@ -2,7 +2,8 @@
 using System.IO;
 using System.Windows.Forms;
 using HtmlAgilityPack;
-using System.Threading;
+using System.Runtime.InteropServices;
+using System.Text;
 
 namespace R6_Server_Changer
 {
@@ -18,7 +19,6 @@ namespace R6_Server_Changer
         {
             InitializeComponent();
         }
-
         private void file_path_Click(object sender, EventArgs e)
         {
             OpenFile_Dialog.Title = "R6 GameSettings.ini 파일을 열어주십시오";
@@ -26,7 +26,6 @@ namespace R6_Server_Changer
             if (OpenFile_Dialog.ShowDialog() == DialogResult.OK)
             {
                 uri = (OpenFile_Dialog.FileName);
-
                 SelectFile = true;
             }
 

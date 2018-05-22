@@ -136,7 +136,7 @@
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.groupBox1.Size = new System.Drawing.Size(671, 226);
+            this.groupBox1.Size = new System.Drawing.Size(670, 226);
             this.groupBox1.TabIndex = 9;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "간단 전적 uplay만 검색 가능합니다";
